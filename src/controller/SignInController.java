@@ -31,9 +31,6 @@ public class SignInController {
     @FXML private TextField lastNameField;
     @FXML private TextField studentIDField;
 
-    @FXML private Label newStudentLbl;
-    @FXML private Label orLbl;
-    @FXML private Label signInTitle;
     @FXML private Label warningLbl;
     
     private StudentList studentList;

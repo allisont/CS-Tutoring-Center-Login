@@ -33,7 +33,6 @@ public class QueueController {
 
     @FXML private Label currentTutorLbl;
     @FXML private Label queueLengthLbl;
-    @FXML private Label queueTitle;
 	
     @FXML private TableView<StudentLoggedIn> queueTableView; //tableview
     @FXML private TableColumn<StudentLoggedIn, LocalTime> timeInColumn;

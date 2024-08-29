@@ -13,7 +13,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Student;
 import model.StudentLoggedIn;
@@ -21,14 +20,10 @@ import model.StudentLoginQueue;
 import utilities.DataCenter;
 
 public class StudentHubController {
-	
-    @FXML private AnchorPane studentHubPane;
-    
+	    
     @FXML private Button doneBtn;
 
-    @FXML private Label chooseCourseLbl;
     @FXML private Label missingWarningLbl;
-    @FXML private Label topicsLbl;
     @FXML private Label welcomeLbl;
 
     @FXML private ListView<String> courseListView;
@@ -62,7 +57,6 @@ public class StudentHubController {
     	
     	if (course == null|| topics.equals("") || instructor==null) {
     		missingWarningLbl.setOpacity(1);
-        	System.out.println(missingWarningLbl.getOpacity());
     		return;
     	}
     	

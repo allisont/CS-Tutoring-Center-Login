@@ -14,15 +14,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class AdminLoginController {
 
-    @FXML private AnchorPane adminLoginPane;
-
-    @FXML private Label adminLoginTitle;
-    @FXML private Label notAdminLbl;
     @FXML private Label warningLbl;
 
     @FXML private Button loginBtn;

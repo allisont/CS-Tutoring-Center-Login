@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -29,9 +28,6 @@ public class SignOutController {
     @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
     @FXML private TextField studentIDField;
-
-    @FXML private Label orLbl;
-    @FXML private Label studentSignOutTitle;
     
     private StudentLoggedIn studentLoggedIn;
     private StudentHistory studentHistory;

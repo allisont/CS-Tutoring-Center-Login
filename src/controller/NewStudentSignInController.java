@@ -33,8 +33,6 @@ public class NewStudentSignInController {
     @FXML private ComboBox<String> courseComboBox;
     @FXML private ListView<String> coursesListView;
 
-    @FXML private Label coursesLbl;
-    @FXML private Label newStudentSignInTitle;
     @FXML private Label missingWarningLbl;
 
     @FXML private TextField firstNameField;

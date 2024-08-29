@@ -21,15 +21,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.shape.Line;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.StudentHistory;
@@ -39,22 +34,12 @@ import utilities.DataCenter;
 
 public class AdminHubController {
 
-    @FXML private BorderPane adminHubPane;
-    @FXML private AnchorPane exportReportAnchorPane;
-    @FXML private AnchorPane reportsAnchorPane;
-    @FXML private AnchorPane tutorsAnchorPane;
-
     @FXML private Button closeProgramBtn;
     @FXML private Button enterBtn;
     @FXML private Button exportBtn;
     @FXML private Button generateBtn;
     @FXML private Button logoutBtn;
 
-    @FXML private Label closeProgramLbl1;
-    @FXML private Label closeProgramLbl2;
-    @FXML private Label currentTutorLbl;
-    @FXML private Label dailyActivityTitle;
-    @FXML private Label toLbl;
     @FXML private Label totalHoursLbl;
     
     @FXML private TableView<StudentLoggedIn> exportReportTableView;
@@ -67,14 +52,6 @@ public class AdminHubController {
     @FXML private TableColumn<StudentLoggedIn, LocalTime> timeInColumn;
     @FXML private TableColumn<StudentLoggedIn, LocalTime> timeOutColumn;
 
-    @FXML private TabPane tabPane;
-    @FXML private TabPane reportsTabPane;
-
-    @FXML private Tab exportReportTab;
-    @FXML private Tab reportsTab;
-    @FXML private Tab trafficActivityTab;
-    @FXML private Tab tutorsTab;
-
     @FXML private ComboBox<String> firstDayComboBox;
     @FXML private ComboBox<String> firstMonthComboBox;
     @FXML private ComboBox<String> secondDayComboBox;
@@ -83,8 +60,6 @@ public class AdminHubController {
     @FXML private TextField firstNameField;
     @FXML private TextField firstYearField;
     @FXML private TextField secondYearField;
-
-    @FXML private Line line;
     
     private DataCenter dc;
     private StudentHistory studentHistory;
