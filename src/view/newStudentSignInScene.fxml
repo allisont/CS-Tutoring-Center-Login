@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newStudentSignInPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewStudentSignInController">
+   <children>
+      <Label fx:id="newStudentSignInTitle" layoutX="269.0" layoutY="44.0" text="New Student Sign In">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="37.0" layoutY="139.0" prefHeight="40.0" prefWidth="423.0" promptText="First Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastNameField" layoutX="37.0" layoutY="211.0" prefHeight="40.0" prefWidth="423.0" promptText="Last Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="studentIDField" layoutX="37.0" layoutY="282.0" prefHeight="40.0" prefWidth="423.0" promptText="Student ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="courseComboBox" layoutX="482.0" layoutY="332.0" prefHeight="26.0" prefWidth="104.0" promptText="Course" />
+      <Button fx:id="addBtn" layoutX="626.0" layoutY="332.0" mnemonicParsing="false" onAction="#addBtnClicked" text="Add" />
+      <ListView fx:id="coursesListView" layoutX="500.0" layoutY="140.0" prefHeight="183.0" prefWidth="213.0" />
+      <Button fx:id="removeBtn" layoutX="673.0" layoutY="332.0" mnemonicParsing="false" onAction="#removeBtnClicked" text="Remove" />
+      <Label fx:id="coursesLbl" layoutX="522.0" layoutY="116.0" text="My Computer Science Courses" />
+      <Button fx:id="enterBtn" defaultButton="true" disable="false" layoutX="330.0" layoutY="419.0" mnemonicParsing="false" onAction="#enterBtnClicked" prefHeight="40.0" prefWidth="90.0" text="Enter">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="37.0" layoutY="338.0" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="40.0" prefWidth="80.0" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="missingWarningLbl" layoutX="317.0" layoutY="388.0" opacity="0.0" text="Missing Components" textFill="RED" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="queuePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QueueController">
+   <children>
+      <Label fx:id="queueTitle" layoutX="35.0" layoutY="32.0" text="Tutoring Center Queue">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="queueTableView" layoutX="35.0" layoutY="90.0" prefHeight="318.0" prefWidth="674.0">
+        <columns>
+          <TableColumn fx:id="timeInColumn" minWidth="0.0" prefWidth="110.0" text="Time In" />
+          <TableColumn fx:id="studentNameColumn" prefWidth="150.0" text="Student Name" />
+            <TableColumn fx:id="courseColumn" prefWidth="109.0" text="Course" />
+            <TableColumn fx:id="instructorColumn" prefWidth="125.0" text="Instructor" />
+            <TableColumn fx:id="topicsColumn" prefWidth="179.0" text="Topics" />
+        </columns>
+      </TableView>
+      <Button fx:id="signInBtn" layoutX="523.0" layoutY="32.0" mnemonicParsing="false" onAction="#signInBtnClicked" prefHeight="36.0" prefWidth="83.0" text="Sign In">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="signOutBtn" layoutX="626.0" layoutY="32.0" mnemonicParsing="false" onAction="#signOutBtnClicked" prefHeight="36.0" prefWidth="83.0" text="Sign Out">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="queueLengthLbl" layoutX="35.0" layoutY="426.0" text="Number of students in front of you:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentTutorLbl" layoutX="35.0" layoutY="452.0" text="Current Tutor: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="adminBtn" layoutX="626.0" layoutY="427.0" mnemonicParsing="false" onAction="#adminBtnClicked" prefHeight="36.0" prefWidth="83.0" text="Admin">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

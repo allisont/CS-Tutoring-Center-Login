@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="adminHubPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminHubController">
+   <center>
+      <TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="reportsTab" text="Reports">
+               <content>
+                  <AnchorPane fx:id="reportsAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="reportsTabPane" layoutX="-1.0" layoutY="46.0" prefHeight="424.0" prefWidth="750.0" side="RIGHT" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="exportReportTab" text="Export Report">
+                                 <content>
+                                    <AnchorPane fx:id="exportReportAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="exportReportTableView" layoutX="1.0" layoutY="27.0" prefHeight="348.0" prefWidth="721.0">
+                                            <columns>
+                                              <TableColumn fx:id="dateColumn" prefWidth="85.0" text="Date" />
+                                              <TableColumn fx:id="studentColumn" prefWidth="94.0" text="Student" />
+                                                <TableColumn fx:id="idColumn" prefWidth="81.8841552734375" text="ID" />
+                                                <TableColumn fx:id="timeInColumn" prefWidth="84.38409423828125" text="Time In" />
+                                                <TableColumn fx:id="timeOutColumn" prefWidth="84.1158447265625" text="Time Out" />
+                                                <TableColumn fx:id="courseColumn" prefWidth="85.0" text="Course" />
+                                                <TableColumn fx:id="instructorColumn" minWidth="0.0" prefWidth="0.0" text="Instructor" />
+                                                <TableColumn fx:id="topicsColumn" prefWidth="206.00006103515625" text="Topics" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="exportBtn" layoutX="316.0" layoutY="380.0" mnemonicParsing="false" onAction="#exportBtnClicked" prefHeight="40.0" prefWidth="92.0" text="Export">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label fx:id="totalHoursLbl" layoutX="14.0" layoutY="6.0" text="Total Hours: " />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                        <ComboBox fx:id="firstMonthComboBox" layoutX="7.0" layoutY="14.0" prefHeight="26.0" prefWidth="85.0" promptText="Month" />
+                        <ComboBox fx:id="firstDayComboBox" layoutX="99.0" layoutY="14.0" prefHeight="26.0" prefWidth="80.0" promptText="Day" />
+                        <TextField fx:id="firstYearField" layoutX="188.0" layoutY="14.0" prefHeight="26.0" prefWidth="71.0" promptText="YYYY" />
+                        <Label fx:id="toLbl" layoutX="271.0" layoutY="20.0" text="to" />
+                        <ComboBox fx:id="secondMonthComboBox" layoutX="293.0" layoutY="15.0" prefHeight="26.0" prefWidth="95.0" promptText="Month" />
+                        <ComboBox fx:id="secondDayComboBox" layoutX="397.0" layoutY="15.0" prefHeight="26.0" prefWidth="80.0" promptText="Day" />
+                        <TextField fx:id="secondYearField" layoutX="486.0" layoutY="15.0" prefHeight="26.0" prefWidth="71.0" promptText="YYYY" />
+                        <Button fx:id="generateBtn" defaultButton="true" layoutX="637.0" layoutY="16.0" mnemonicParsing="false" onAction="#generateBtnClicked" text="Generate" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tutorsTab" text="Tutors">
+               <content>
+                  <AnchorPane fx:id="tutorsAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="firstNameField" layoutX="220.0" layoutY="72.0" prefHeight="40.0" prefWidth="423.0" promptText="First Name">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="currentTutorLbl" layoutX="120.0" layoutY="83.0" prefHeight="19.0" prefWidth="107.0" text="Current Tutor">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="closeProgramBtn" layoutX="311.0" layoutY="352.0" mnemonicParsing="false" onAction="#closeProgramBtnClicked" prefHeight="40.0" prefWidth="129.0" text="Close Program">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="enterBtn" defaultButton="true" layoutX="320.0" layoutY="132.0" mnemonicParsing="false" onAction="#enterBtnClicked" prefHeight="40.0" prefWidth="111.0" text="Enter">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Line fx:id="line" endX="390.5" layoutX="376.0" layoutY="209.0" startX="-415.5" />
+                        <Label fx:id="closeProgramLbl1" layoutX="172.0" layoutY="289.0" text="Please close program every 5:30 PM when tutoring center closes">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="closeProgramLbl2" layoutX="194.0" layoutY="317.0" text="Note: closing the program will log all students in queue off.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutBtnClicked" prefHeight="40.0" prefWidth="88.0" text="Logout" BorderPane.alignment="BOTTOM_LEFT">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

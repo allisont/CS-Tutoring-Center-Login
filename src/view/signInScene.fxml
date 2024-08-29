@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signInPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+   <children>
+      <Label fx:id="signInTitle" layoutX="296.0" layoutY="38.0" text="Student Sign In">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="165.0" layoutY="140.0" prefHeight="40.0" prefWidth="423.0" promptText="First Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastNameField" layoutX="165.0" layoutY="198.0" prefHeight="40.0" prefWidth="423.0" promptText="Last Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="orLbl" layoutX="369.0" layoutY="258.0" text="or">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="studentIDField" layoutX="165.0" layoutY="299.0" prefHeight="40.0" prefWidth="423.0" promptText="Student ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="newStudentLbl" layoutX="498.0" layoutY="352.0" onMouseClicked="#newStudentClicked" text="New Student?" textFill="#0900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="enterBtn" defaultButton="true" layoutX="337.0" layoutY="412.0" mnemonicParsing="false" onAction="#enterBtnClicked" prefHeight="40.0" prefWidth="90.0" text="Enter">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="165.0" layoutY="351.0" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="40.0" prefWidth="81.0" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="warningLbl" layoutX="308.0" layoutY="113.0" opacity="0.0" text="Incorrect ID or New Student" textFill="RED" />
+   </children>
+</AnchorPane>
